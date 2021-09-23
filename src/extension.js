@@ -24,20 +24,14 @@ function activate(context) {
       largeImageKey: "lgicon",
       largeImageText: "VS Code",
     });
-    const id = rpc.user.id;
-    const username = rpc.user.username;
-    console.log("Extensionjs" + id + " " + username);
-    console.log("Rich Presence is now ready");
-    
-    const requests = new PresenceReq(rpc, activeDate);
-    console.log(requests);
-    console.log("Initialization complete!");
+    const requests = new PresenceReq(rpc);
+    vscode.window.showInformationMessage("uwu Thank you for using this extension...");
   });
 
   let test = vscode.commands.registerCommand(
-    "betterpresence.helloWorld",
+    "betterpresence.about",
     function () {
-      vscode.window.showInformationMessage("Hello World from BetterPresence!");
+      vscode.window.showInformationMessage("Yo, thanks for hitting the about button! I really appreciate it [Message me at FreSauce#5465 on discord]");
     }
   );
   context.subscriptions.push(test);
