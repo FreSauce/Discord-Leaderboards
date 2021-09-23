@@ -1,9 +1,10 @@
 {
   "name": "discord-leaderboard",
   "displayName": "Discord Leaderboard",
-  "description": "Tracks time spent on VS Code and manages it with Discord",
-  "publisher": "fresauce",
+  "description": "Make VSCode competitive with leaderboards",
+  "publisher": "FreSauce",
   "version": "0.0.1",
+  "icon": "https://img.icons8.com/nolan/128/visual-studio-2019.png",
   "engines": {
     "vscode": "^1.56.0"
   },
@@ -17,12 +18,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "betterpresence.helloWorld",
-        "title": "Hello World"
-      },
-      {
-        "command": "betterpresence.startCountAgain",
-        "title": "Reset Time"
+        "command": "betterpresence.about",
+        "title": "About Me"
       }
     ]
   },
@@ -43,7 +40,8 @@
     "vscode-test": "^1.5.2"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "discord-rpc": "^3.2.0"
+    "axios": "^0.21.4",
+    "discord-rpc": "^3.2.0",
+    "socket.io-client": "^4.2.0"
   }
 }
