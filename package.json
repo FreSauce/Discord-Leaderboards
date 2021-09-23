@@ -5,7 +5,7 @@
   "publisher": "FreSauce",
   "version": "2.1.0",
   "repository": "https://github.com/FreSauce/Discord-Leaderboards",
-  "icon": "./icon/vscode.png",
+  "icon": "icon/vscode.png",
   "engines": {
     "vscode": "^1.56.0"
   },
