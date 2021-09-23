@@ -3,7 +3,7 @@
   "displayName": "Discord Leaderboard",
   "description": "Make VSCode competitive with leaderboards",
   "publisher": "FreSauce",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "icon": "https://img.icons8.com/nolan/128/visual-studio-2019.png",
   "engines": {
     "vscode": "^1.56.0"
