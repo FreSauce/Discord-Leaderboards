@@ -4,6 +4,7 @@
   "description": "Make VSCode competitive with leaderboards",
   "publisher": "FreSauce",
   "version": "1.0.0",
+  "repository": "https://github.com/FreSauce/Discord-Leaderboards",
   "icon": "https://img.icons8.com/nolan/128/visual-studio-2019.png",
   "engines": {
     "vscode": "^1.56.0"
