@@ -1,47 +1,36 @@
-const RPC = require("discord-rpc");
-const vscode = require("vscode");
+// The module 'vscode' contains the VS Code extensibility API
+// Import the module and reference it with the alias vscode in your code below
+const vscode = require('vscode');
 
-let activeDate = null;
+// This method is called when your extension is activated
+// Your extension is activated the very first time the command is executed
+
 /**
  * @param {vscode.ExtensionContext} context
  */
-const rpc = new RPC.Client({
-  transport: "ipc",
-});
-
-rpc.login({
-  clientId: "850639416669110272",
-});
-const { PresenceReq } = require("./main");
-
 function activate(context) {
-  rpc.on("ready", () => {
-    activeDate = new Date();
-    rpc.setActivity({
-      details: "Detecting Filename",
-      state: "Detecting Workspace",
-      startTimestamp: activeDate,
-      largeImageKey: "lgicon",
-      largeImageText: "VS Code",
-    });
-    const requests = new PresenceReq(rpc);
-    vscode.window.showInformationMessage("uwu Thank you for using this extension...");
-  });
 
-  let test = vscode.commands.registerCommand(
-    "betterpresence.about",
-    function () {
-      vscode.window.showInformationMessage("Yo, thanks for hitting the about button! I really appreciate it [Message me at FreSauce#5465 on discord]");
-    }
-  );
-  context.subscriptions.push(test);
+	// Use the console to output diagnostic information (console.log) and errors (console.error)
+	// This line of code will only be executed once when your extension is activated
+	console.log('Congratulations, your extension "discord-leaderboards" is now active!');
+
+	// The command has been defined in the package.json file
+	// Now provide the implementation of the command with  registerCommand
+	// The commandId parameter must match the command field in package.json
+	let disposable = vscode.commands.registerCommand('discord-leaderboards.helloWorld', function () {
+		// The code you place here will be executed every time your command is executed
+
+		// Display a message box to the user
+		vscode.window.showInformationMessage('Hello World from Discord Leaderboards!');
+	});
+
+	context.subscriptions.push(disposable);
 }
 
-function deactivate() {
-  vscode.window.showInformationMessage("The extension has been deactivated!");
-}
+// This method is called when your extension is deactivated
+function deactivate() {}
 
 module.exports = {
-  activate,
-  deactivate
-};
+	activate,
+	deactivate
+}
